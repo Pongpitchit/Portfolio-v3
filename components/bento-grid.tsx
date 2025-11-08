@@ -12,7 +12,6 @@ export default function BentoGrid() {
       category: "Website, Docker, Mobile App",
       size: "large",
       link: "https://github.com/Pongpitchit/Qrcode-Order-Docker",
-      gradient: "from-blue-500 to-blue-600",
       image: "/restaurant-qr-code-ordering.png",
     },
     {
@@ -22,7 +21,6 @@ export default function BentoGrid() {
       category: "AI/Detection",
       size: "medium",
       link: "https://github.com/Pongpitchit/Opencv-linebot-API",
-      gradient: "from-purple-500 to-purple-600",
       image: "/computer-vision-fall-detection.png",
     },
     {
@@ -33,7 +31,6 @@ export default function BentoGrid() {
       category: "Website",
       size: "small",
       link: "https://github.com/Pongpitchit/Fullstack-Docker",
-      gradient: "from-pink-500 to-pink-600",
       image: "/fullstack-docker.png",
     },
     {
@@ -43,7 +40,6 @@ export default function BentoGrid() {
       category: "WordPress",
       size: "small",
       link: "#",
-      gradient: "from-amber-500 to-amber-600",
       image: "/guinea-pig.png",
     },
   ]
@@ -61,12 +57,11 @@ export default function BentoGrid() {
             <div
               key={project.id}
               className={`
-                ${
-                  project.size === "large"
-                    ? "lg:col-span-2 lg:row-span-1"
-                    : project.size === "medium"
-                      ? "md:col-span-1 md:row-span-2 lg:col-span-1"
-                      : "col-span-1"
+                ${project.size === "large"
+                  ? "lg:col-span-2 lg:row-span-1"
+                  : project.size === "medium"
+                    ? "md:col-span-1 md:row-span-2 lg:col-span-1"
+                    : "col-span-1"
                 }
                 group
               `}
@@ -79,9 +74,6 @@ export default function BentoGrid() {
               >
                 <div className="absolute inset-0">
                   <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-40 group-hover:opacity-50 transition-opacity duration-300`}
-                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                 </div>
 
